@@ -30,3 +30,4 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/cart', [CartController::class, 'cartGet'])->name('cart.get')->middleware('auth');
 Route::post('/cart', [CartController::class, 'redeem'])->name('redeem')->middleware('auth');
+Route::post('/pay', [CartController::class, 'pay'])->name('cart.pay');

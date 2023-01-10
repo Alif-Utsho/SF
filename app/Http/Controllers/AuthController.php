@@ -66,7 +66,7 @@ class AuthController extends Controller
             else return "Invalid Credential";
         }
         else return "User not found";
-        return $req;
+        return redirect()->route('login.get');
     }
 
     public function logout(){

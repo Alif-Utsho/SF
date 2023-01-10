@@ -18,7 +18,7 @@
       <div class="col-12">
         <div class="card card-registration card-registration-2" style="border-radius: 15px;">
           <div class="card-body p-0">
-            <x-cart/>
+            <x-cart voucher={{$voucher}}/>
           </div>
         </div>
       </div>
