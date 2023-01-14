@@ -11,7 +11,7 @@ class AdminController extends Controller
 {
     public function DashboardGet(){
 
-        $vouchers = Voucher::all(); //reverse();
+        $vouchers = Voucher::all()->reverse();
         
         foreach($vouchers as $voucher){
             $due[$voucher['name']] = $voucher['amount'] - UsedVoucher::where('voucher_id', $voucher['id'])->sum('amount');
