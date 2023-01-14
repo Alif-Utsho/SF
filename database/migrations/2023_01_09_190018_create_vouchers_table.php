@@ -18,6 +18,7 @@ class CreateVouchersTable extends Migration
             $table->string('name');
             $table->string('parcent');
             $table->integer('amount');
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }

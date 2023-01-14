@@ -26,6 +26,11 @@ class Cart extends Component
         if($v){
             $this->voucher = $v;
 
+            if(!$v->status){
+                $this->message = "Voucher Expired";
+                return;
+            } 
+
             if($this->user->type !== 'Premium'){
                 $uv = UsedVoucher::where('user_id', $this->user->id)->first();
                 if($uv){
